@@ -17,28 +17,28 @@ The script is divided into 2 modes: Server and Client. The Server is where the i
 
 **Vina2Network exclusive Commands**
 
-**'--ligand_dir'**:	Ligand directory (PDBQT file)
-**'--mode'**:	Client or server mode
-**'--host_ip'**:	The server computer IP
-**'--host_port'**:	The server computer Port
+**'--ligand_dir'** **:**	Ligand directory (PDBQT file)
+**'--mode'** **:**	Client or server mode
+**'--host_ip'** **:**	The server computer IP
+**'--host_port'** **:**	The server computer Port
 
 **Autodock Vina Commands**
 
-**'--receptor'**:	Receptor file (PDBQT file)
-**'--flex'**:  Receptor flexible side chain (if it's used)
-**'--center_x'**:	X side Grid Box Coordinate
-**'--center_y'**:	Y side Grid Box Coordinate
-**'--center_z'**:	Z side Grid Box Coordinate
-**'--size_x'**:	X side Grid Box Size
-**'--size_y'**:	Y side Grid Box Size
-**'--size_z'**:	Z side Grid Box Size
-**'--help'**:	Show the script commands
-**'--log'**:	Creates a log file
-**'--cpu'**:	Number of cores (per CPU)
-**'--seed'**:	Changes the random seed
-**'--exhaustiveness'**:	Exhaustiveness of the search
-**'--num_modes'**:	Number of binding modes generated
-**'--energy_range'**:	Max energy difference between best and worst binding
+**'--receptor'** **:**	Receptor file (PDBQT file)
+**'--flex'** **:**  Receptor flexible side chain (if it's used)
+**'--center_x'** **:**	X side Grid Box Coordinate
+**'--center_y'** **:**	Y side Grid Box Coordinate
+**'--center_z'** **:**	Z side Grid Box Coordinate
+**'--size_x'** **:**	X side Grid Box Size
+**'--size_y'** **:**	Y side Grid Box Size
+**'--size_z'** **:**	Z side Grid Box Size
+**'--help'** **:**	Show the script commands
+**'--log'** **:**	Creates a log file
+**'--cpu'** **:**	Number of cores (per CPU)
+**'--seed'** **:**	Changes the random seed
+**'--exhaustiveness'** **:**	Exhaustiveness of the search
+**'--num_modes'** **:**	Number of binding modes generated
+**'--energy_range'** **:**	Max energy difference between best and worst binding
 
 ### Contact
 
