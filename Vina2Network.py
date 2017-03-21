@@ -30,7 +30,7 @@ from threading import Timer, Thread, Event
 
 title_screen = '''
 ==============================================================================
-VINA 2 CLUSTER - Clustering tool for Autodock Vina
+VINA2NETWORK- Networking tool for Autodock Vina
 ------------------------------------------------------
 Authors: Woloski, R.D.; Kremer, F.S.; Eslabão, M.R.; Pinto, L.S.
 ------------------------------------------------------
@@ -140,7 +140,6 @@ class MyHandler(FTPHandler):
         	pass
 
     def on_logout(self, username):
-        # do something when user logs out
         pass
 
     def on_file_sent(self, file):
@@ -150,11 +149,9 @@ class MyHandler(FTPHandler):
         pass
 
     def on_incomplete_file_sent(self, file):
-        # do something when a file is partially sent
         pass
 
     def on_incomplete_file_received(self, file):
-        # remove partially uploaded files
         import os
         os.remove(file)
 
@@ -357,7 +354,6 @@ if arguments.mode == 'client':
 			input_file.close()
 		ftp.delete(filename)
 		ftp.cwd('../LigandProcessing')
-		#os.rename(filename, credential_login + filename)
 		ftp.storbinary('STOR ' + filename, open(filename, 'rb'))
 		ftp.rename(filename, credential_login + filename)
 		ftp.cwd('../')
@@ -368,8 +364,6 @@ if arguments.mode == 'client':
 		vina_return_code = subprocess.call("vina --config Output.txt",shell=True)
 		if vina_return_code == 0:
 			print """Done!"""
-			#ftp.connect(arguments.host_ip, arguments.host_port)
-			#ftp.login("client", "vina2cluster")
 			ftp.cwd('../LigandResults')
 			ftp.storbinary('STOR ' + os.path.splitext(filename)[0] + '_out.pdbqt', open (os.path.splitext(filename)[0] + '_out.pdbqt'))
 			ftp.cwd('../LigandProcessing')
